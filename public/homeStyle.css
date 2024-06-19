@@ -1,0 +1,109 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Light gray */
+    color: #333;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .hero {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .hero .logo {
+    font-size: 3rem;
+    color: #6c5ce7; /* Purple */
+    margin-bottom: 10px;
+  }
+  
+  .hero .tagline {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 30px;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #6c5ce7; /* Purple */
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #5a4bd8; /* Lighter purple on hover */
+  }
+  
+  .features {
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .feature-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .download {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #f0f0f0; /* Light gray background */
+  }
+  
+  .footer {
+    background-color: #333; /* Dark gray */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin-bottom: 10px;
+  }
+  
+  .footer .nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer .nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
