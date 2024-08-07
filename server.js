@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 const localIP = '192.168.1.51';
 app.listen(port, localIP, () => {
-    console.log(`it's alive on http://${localIP}:${port}`);
+    console.log(`it's alive on http://helo`); //${localIP}:${port}
 });
 
 app.use(authRouts);
