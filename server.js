@@ -27,9 +27,9 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'home.html'));
 });
 
-const localIP = '192.168.1.51';
+const localIP = process.env.DB_localIP;
 app.listen(port, localIP, () => {
-    console.log(`it's alive on http://helo`); //${localIP}:${port}
+    console.log(`it's alive on http://${localIP}:${port}`); //
 });
 
 app.use(authRouts);
