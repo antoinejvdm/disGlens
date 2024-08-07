@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'home.html'));
 });
 
-const localIP = "amazoneIP";
+const localIP = "13.53.93.46";
 app.listen(port, localIP, () => {
     console.log(`it's alive on http://${localIP}:${port}`); //
 });
