@@ -8,6 +8,7 @@ const authRouts = require("./routs/auth");
 const postsRout = require("./routs/posts");
 const friendRout = require("./routs/frend")
 const db = require('./db_conection');
+const cors = require('cors');
 
 
 // Load environment variables from .env file
@@ -16,6 +17,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8080;
 
+app.use(cors());
 // Serve static files from the 'public' directory   
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -28,8 +30,8 @@ app.get('/', (req, res) => {
 });
 
 // const localIP = "13.53.93.46";
-app.listen(port, () => {
-    console.log(`it's alive on port ${port}`); //
+app.listen(port, '127.0.0.1', () => {
+    console.log(`it's alive on port 127.0.0.1/${port}`); //
 });
 
 app.use(authRouts);

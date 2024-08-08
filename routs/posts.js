@@ -14,9 +14,9 @@ postsRout.get('/api/feed', async (req, res) => {
       const query = `SELECT p.*
         FROM post p
         JOIN(
-        SELECT friend2 AS user_id FROM friends WHERE friend1 = $1
+        SELECT friend2 AS user_id FROM friends WHERE friend1 = $1 AND accepted = true
         UNION
-        SELECT friend1 AS user_id FROM friends WHERE friend2 = $1
+        SELECT friend1 AS user_id FROM friends WHERE friend2 = $1 AND accepted = true
         UNION
         SELECT $1 AS user_id
           ) AS user_ids ON p.user_id = user_ids.user_id
@@ -62,6 +62,5 @@ postsRout.post('/api/post', async (req, res) => {
   
   }
   );
-
   
 module.exports = postsRout;
