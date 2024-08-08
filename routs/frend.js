@@ -142,7 +142,7 @@ WHERE
     const result = await db.query(query, [user_id]);
 
     if (result.rows.length === 0) {
-      console.log('No friends found');
+      // console.log('No friends found');
       return res.status(404).json({ error: 'No friends found' });
     }
     res.status(200).json(result.rows);
@@ -173,7 +173,7 @@ friendRout.get('/api/removeFriend', async (req, res) => {
     }
 
   } catch (e) {
-    console.error('Error during finding friend', e);
+    console.error('Error during finding friend for ${user_id}', e);
     res.status(500).json({ error: 'Something went wrong when finding friend' });
   }
 });
